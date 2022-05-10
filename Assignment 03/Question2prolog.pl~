@@ -1,0 +1,15 @@
+nh(a,b,45).
+nh(a,c,31).
+nh(a,e,51).
+nh(c,d,35).
+nh(b,e,42).
+nh(e,d,40).
+nh(e,f,37).
+nh(f,g,45).
+nh(d,g,42).
+nh(f,i,30).
+nh(g,i,50).
+distanceLength(X,Y,L):-
+ nh(X,Y,L),!.
+distanceLength(X,Y,L):-
+ nh(X,Z,L1), distanceLength(Z,Y,L2), L is L1+L2.
